@@ -1,3 +1,7 @@
+@use 'base/variables.scss' as v;
+@use 'base/mixins.scss' as m;
+@use 'base/fonts.scss' as f;
+
 //Burger
 /*
 .icon-menu {
@@ -48,3 +52,44 @@
 	}
 }
 */
+//====================================================================
+.header {
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: m.rem(12);
+    padding-bottom: m.rem(12);
+  }
+  // .header__logo
+  &__logo {
+    flex: 0 0 m.rem(141);
+    height: m.rem(40);
+  }
+  // .header__menu
+  &__menu {
+  }
+}
+.menu {
+  // .menu__body
+  &__body {
+  }
+  // .menu__list
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: m.rem(8);
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    display: inline-block;
+    padding: m.rem(12) m.rem(20);
+    @include f.action-small;
+    color: v.$dark;
+  }
+}
