@@ -1,6 +1,7 @@
 @use 'sass:math';
-@use 'base/variables' as variables;
-@use 'base/mixins' as mixins;
+@use 'base/variables';
+@use 'base/mixins';
+@use 'base/fonts';
 
 html {
   scroll-behavior: smooth;
