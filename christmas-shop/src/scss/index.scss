@@ -15,12 +15,12 @@
   }
   // .hero__content
   &__content {
-    max-width: m.rem(430);
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: m.rem(12);
+    max-width: m.rem(430);
+    margin: 0 auto;
     color: v.$static-white;
   }
   // .hero__caption
@@ -31,10 +31,63 @@
   &__title {
     text-align: center;
     @include f.header-1;
-    letter-spacing: 0.18em;
   }
   // .hero__button
   &__button {
     @include f.action-small;
+  }
+}
+
+//====================================================================
+
+.about {
+  // .about__container
+  &__container {
+    padding-top: m.rem(60);
+    padding-bottom: m.rem(60);
+    background:
+      url('@img/bg-snow.png') center/cover no-repeat,
+      v.$primary;
+  }
+  // .about__wrapper
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: v.$static-white;
+    border-radius: m.rem(20);
+    overflow: hidden;
+  }
+  // .about__content
+  &__content {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: m.rem(20);
+    max-width: m.rem(426);
+    margin-left: m.rem(60);
+    color: v.$dark;
+  }
+  // .about__caption
+  &__caption {
+    color: v.$primary;
+    @include f.caption;
+  }
+  // .about__title
+  &__title {
+    @include f.header-2;
+  }
+  // .about__text
+  &__text {
+    @include f.pg;
+  }
+  // .about__image-ibg
+  &__image-ibg {
+    flex: 0 1 50%;
+    min-width: m.rem(364);
+    height: m.rem(528);
+    border-radius: m.rem(20);
+    overflow: hidden;
   }
 }

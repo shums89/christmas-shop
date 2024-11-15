@@ -9,7 +9,7 @@
     @@include('html/_header.htm',{})
     <main class="page">
       <h1 class="visually-hidden">Christmas Shop</h1>
-      <div class="page__hero hero">
+      <section class="page__hero hero">
         <div class="hero__container">
           <div class="hero__content">
             <p class="hero__caption">Merry Christmas</p>
@@ -18,7 +18,19 @@
             <p class="hero__caption">and Happy New Year</p>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="page__about about">
+        <div class="about__container">
+          <div class="about__wrapper">
+            <div class="about__content">
+              <p class="about__caption">About</p>
+              <h2 class="about__title">Unleash your inner superhero!</h2>
+              <p class="about__text">This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.</p>
+            </div>
+            <div class="about__image-ibg"><img data-src="@img/santa.png" alt="Santa"></div>
+          </div>
+        </div>
+      </section>
     </main>
     @@include('html/_footer.htm',{})
   </div>
