@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use 'base/variables.scss' as v;
 @use 'base/mixins.scss' as m;
 @use 'base/fonts.scss' as f;
@@ -89,5 +90,111 @@
     height: m.rem(528);
     border-radius: m.rem(20);
     overflow: hidden;
+  }
+}
+
+//====================================================================
+
+.slider {
+  // .slider__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: m.rem(60);
+    padding-bottom: m.rem(60);
+    color: v.$static-white;
+    background:
+      url('@img/bg-snow.png') center/cover no-repeat,
+      v.$primary;
+  }
+  // .slider__caption
+  &__caption {
+    margin-bottom: m.rem(12);
+    @include f.caption;
+  }
+  // .slider__title
+  &__title {
+    margin-bottom: m.rem(20);
+    @include f.header-2;
+  }
+  // .slider__slider
+  &__slider {
+  }
+}
+.slider-slider {
+  position: relative;
+  padding-bottom: m.rem(76);
+
+  // .slider-slider__wrapper
+  &__wrapper {
+    position: relative;
+    height: m.rem(200);
+    width: 100vw;
+  }
+  // .slider-slider__swiper
+  &__swiper {
+    position: absolute;
+    top: 0;
+    left: m.rem(math.div(v.$containerPadding, 2));
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: m.rem(20);
+  }
+  // .slider-slider__slide
+  &__slide {
+    @include f.slider-text;
+  }
+  // .slider-slider__image-ibg
+  &__image-ibg {
+    width: m.rem(200);
+    height: m.rem(200);
+    border-radius: m.rem(20);
+    overflow: hidden;
+  }
+  // .slider-slider__nav-buttons
+  &__nav-buttons {
+    position: absolute;
+    bottom: 0;
+    right: m.rem(math.div(v.$containerPadding, 2));
+    display: flex;
+    gap: m.rem(20);
+  }
+  // .slider-slider__nav-button
+  &__nav-button {
+    border: m.rem(1) solid v.$static-white;
+    border-radius: m.rem(20);
+    width: m.rem(56);
+    height: m.rem(56);
+    transition:
+      color 0.5s ease 0s,
+      background-color 0.5s ease 0s;
+
+    // .slider-slider__nav-button_prev
+    &_prev {
+      transform: rotate(-180deg);
+    }
+    // .slider-slider__nav-button_next
+    &_next {
+    }
+
+    &:disabled {
+      color: v.$static-white-40;
+      border: m.rem(1) solid v.$static-white-40;
+      cursor: default;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @media (any-hover: hover) {
+      &:hover:not(.pets-pagination__button_page),
+      &:hover:not(:disabled) {
+        color: v.$primary;
+        background-color: v.$static-white;
+      }
+    }
   }
 }

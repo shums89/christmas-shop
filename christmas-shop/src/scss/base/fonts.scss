@@ -79,8 +79,9 @@
   text-transform: uppercase;
 }
 
-* {
+body {
   font-family: v.$font-family;
   font-weight: 400;
   font-style: normal;
+  color: v.$dark;
 }
