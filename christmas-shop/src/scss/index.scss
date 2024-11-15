@@ -198,3 +198,41 @@
     }
   }
 }
+
+//====================================================================
+
+.best {
+  // .best__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: m.rem(60);
+    padding-bottom: m.rem(60);
+    color: v.$static-white;
+    background:
+      url('@img/bg-snow.png') center/cover no-repeat,
+      v.$primary;
+  }
+  // .best__caption
+  &__caption {
+    margin-bottom: m.rem(12);
+    @include f.caption;
+  }
+  // .best__title
+  &__title {
+    margin-bottom: m.rem(20);
+    @include f.header-2;
+  }
+  // .best__list
+  &__list {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: m.rem(12);
+  }
+  // .best__item
+  &__item {
+  }
+}
