@@ -1,0 +1,40 @@
+@use 'base/variables.scss' as v;
+@use 'base/mixins.scss' as m;
+@use 'base/fonts.scss' as f;
+
+.hero {
+  // .hero__container
+  &__container {
+    padding-top: m.rem(120);
+    padding-bottom: m.rem(120);
+    border-radius: m.rem(20) m.rem(20) 0 0;
+    background:
+      url('@img/bg-ball.png') center/cover no-repeat,
+      url('@img/bg-snow.png') center/cover no-repeat,
+      v.$primary;
+  }
+  // .hero__content
+  &__content {
+    max-width: m.rem(430);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: m.rem(12);
+    color: v.$static-white;
+  }
+  // .hero__caption
+  &__caption {
+    @include f.caption;
+  }
+  // .hero__title
+  &__title {
+    text-align: center;
+    @include f.header-1;
+    letter-spacing: 0.18em;
+  }
+  // .hero__button
+  &__button {
+    @include f.action-small;
+  }
+}

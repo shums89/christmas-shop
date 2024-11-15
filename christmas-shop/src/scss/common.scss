@@ -1,1 +1,27 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+@use 'base/variables.scss' as v;
+@use 'base/mixins.scss' as m;
+@use 'base/fonts.scss' as f;
+
+.button-primary {
+  width: max-content;
+  padding: m.rem(20) m.rem(32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: m.rem(20);
+  color: v.$static-white;
+  background-color: v.$dark;
+  @include f.action-small;
+  transition:
+    color 0.5s ease 0s,
+    background-color 0.5s ease 0s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: v.$dark;
+      background-color: v.$static-white;
+    }
+  }
+}

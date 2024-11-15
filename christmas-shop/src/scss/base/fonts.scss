@@ -8,7 +8,7 @@
   font-size: m.rem(32);
   font-weight: 600;
   line-height: 150%;
-  letter-spacing: 18%;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
@@ -17,7 +17,7 @@
   font-size: m.rem(24);
   font-weight: 600;
   line-height: 152%;
-  letter-spacing: 16%;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
@@ -26,7 +26,7 @@
   font-size: m.rem(16);
   font-weight: 600;
   line-height: 152%;
-  letter-spacing: 8%;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -35,7 +35,7 @@
   font-size: m.rem(12);
   font-weight: 600;
   line-height: 130%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -51,7 +51,7 @@
   font-size: m.rem(24);
   font-weight: 600;
   line-height: 152%;
-  letter-spacing: 16%;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
@@ -60,7 +60,7 @@
   font-size: m.rem(12);
   font-weight: 600;
   line-height: 130%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -69,7 +69,7 @@
   font-size: m.rem(24);
   font-weight: 400;
   line-height: 100%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
 }
 
 @mixin slider-text {
