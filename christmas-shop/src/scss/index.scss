@@ -130,7 +130,8 @@
   &__wrapper {
     position: relative;
     height: m.rem(200);
-    width: 100vw;
+    width: m.rem(v.$containerWidth);
+    overflow: hidden;
   }
   // .slider-slider__swiper
   &__swiper {
@@ -249,6 +250,7 @@
     padding-top: m.rem(180);
     padding-bottom: m.rem(180);
     color: v.$static-white;
+    border-radius: 0 0 m.rem(20) m.rem(20);
     background:
       url('@img/bg-forest.png') center/cover no-repeat,
       url('@img/bg-snow.png') center/cover no-repeat,
