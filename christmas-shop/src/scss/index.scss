@@ -236,3 +236,79 @@
   &__item {
   }
 }
+
+//====================================================================
+
+.cta {
+  // .cta__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: m.rem(20);
+    padding-top: m.rem(180);
+    padding-bottom: m.rem(180);
+    color: v.$static-white;
+    background:
+      url('@img/bg-forest.png') center/cover no-repeat,
+      url('@img/bg-snow.png') center/cover no-repeat,
+      v.$primary;
+  }
+  // .cta__title
+  &__title {
+    max-width: m.rem(426);
+    text-align: center;
+    @include f.header-2;
+  }
+  // .cta__button
+  &__button {
+  }
+  // .cta__table
+  &__table {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    border-collapse: collapse;
+
+    & caption {
+      @include f.caption;
+      margin-bottom: m.rem(8);
+    }
+    & thead {
+      order: 2;
+      padding: 0 m.rem(12) m.rem(12);
+      border-radius: 0 0 m.rem(20) m.rem(20);
+      overflow: hidden;
+      background-color: v.$static-white-40;
+    }
+    & tr {
+    }
+    & th {
+      width: m.rem(80);
+      text-align: center;
+      @include f.header-4;
+    }
+    tbody {
+      padding: m.rem(8) m.rem(12) 0;
+      border-radius: m.rem(20) m.rem(20) 0 0;
+      overflow: hidden;
+      background-color: v.$static-white-40;
+    }
+    & td {
+      position: relative;
+      width: m.rem(80);
+      text-align: center;
+      @include f.header-2;
+
+      &:not(:last-child):after {
+        position: absolute;
+        content: '';
+        width: m.rem(2);
+        height: m.rem(20);
+        bottom: 0;
+        right: 0;
+        background-color: v.$static-white-40;
+      }
+    }
+  }
+}
