@@ -1,0 +1,72 @@
+@use 'sass:math';
+@use 'base/variables.scss' as v;
+@use 'base/mixins.scss' as m;
+@use 'base/fonts.scss' as f;
+
+.gifts {
+  // .gifts__container
+  &__container {
+    padding-top: m.rem(60);
+    padding-bottom: m.rem(60);
+    border-radius: m.rem(20);
+    color: v.$static-white;
+    background:
+      url('@img/bg-garland.png') top center/100% no-repeat,
+      v.$primary;
+  }
+  // .gifts__title
+  &__title {
+    max-width: m.rem(426);
+    margin: 0 auto m.rem(20);
+    text-align: center;
+    @include f.header-1;
+  }
+  // .gifts__tabs
+  &__tabs {
+  }
+}
+.gifts-tabs {
+  // .gifts-tabs__header
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: m.rem(8);
+    margin-bottom: m.rem(20);
+    @include f.action-small;
+  }
+  // .gifts-tabs__header-item
+  &__header-item {
+    cursor: pointer;
+
+    & > input {
+      display: none;
+    }
+
+    & > span {
+      display: inline-block;
+      padding: m.rem(12) m.rem(20);
+      border-radius: 12px;
+      transition: background-color 0.3s ease 0s;
+    }
+
+    & > input:checked ~ span {
+      background-color: v.$static-white-20;
+    }
+
+    @media (any-hover: hover) {
+      &:hover > span {
+        background-color: v.$static-white-20;
+      }
+    }
+  }
+  // .gifts-tabs__content
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: m.rem(12);
+  }
+  // .gifts-tabs__content-item
+  &__content-item {
+  }
+}

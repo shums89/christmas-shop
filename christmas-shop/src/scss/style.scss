@@ -12,6 +12,9 @@
 @use 'gifts';
 
 .page {
+  // .page__title
+  &__title {
+  }
   // .page__hero
   &__hero {
   }
@@ -26,5 +29,8 @@
   }
   // .page__cta
   &__cta {
+  }
+  // .page__gifts
+  &__gifts {
   }
 }
