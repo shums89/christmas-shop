@@ -65,7 +65,21 @@
   // .header__logo
   &__logo {
     flex: 0 0 m.rem(141);
+    display: flex;
+    align-items: center;
+    column-gap: m.rem(8);
     height: m.rem(40);
+    padding: m.rem(8) m.rem(20);
+    cursor: pointer;
+    @include f.action-small;
+
+    & img {
+      width: m.rem(24);
+      height: m.rem(24);
+    }
+    & span {
+      flex-shrink: 0;
+    }
   }
   // .header__menu
   &__menu {
@@ -89,7 +103,26 @@
   &__link {
     display: inline-block;
     padding: m.rem(12) m.rem(20);
-    @include f.action-small;
+    border-radius: m.rem(12);
     color: v.$dark;
+    transition:
+      color 0.5s ease 0s,
+      background-color 0.5s ease 0s;
+    @include f.action-small;
+
+    .html-gifts &_gifts {
+      color: v.$primary;
+      background-color: v.$primary-10;
+      cursor: default;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: v.$primary;
+        background-color: v.$primary-10;
+      }
+    }
   }
 }
