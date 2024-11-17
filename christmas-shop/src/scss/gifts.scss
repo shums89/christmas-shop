@@ -37,8 +37,6 @@
   }
   // .gifts-tabs__header-item
   &__header-item {
-    cursor: pointer;
-
     & > input {
       display: none;
     }
@@ -47,11 +45,15 @@
       display: inline-block;
       padding: m.rem(12) m.rem(20);
       border-radius: 12px;
+      cursor: pointer;
       transition: background-color 0.3s ease 0s;
     }
 
     & > input:checked ~ span {
       background-color: v.$static-white-20;
+      cursor: default;
+      user-select: none;
+      pointer-events: none;
     }
 
     @media (any-hover: hover) {
