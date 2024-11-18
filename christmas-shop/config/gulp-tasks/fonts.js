@@ -5,7 +5,7 @@ import { getFontWeight, sortFonts } from './functions.js';
 
 export const otfToTtf = () => {
   // Ищем файлы шрифтов .otf
-  return app.gulp.src(`${app.path.srcFolder}/fonts/*.otf`, {})
+  return app.gulp.src(`${app.path.srcFolder}/fonts/*.otf`, { encoding: false })
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
         title: "FONTS",
@@ -21,7 +21,7 @@ export const otfToTtf = () => {
 }
 export const ttfToWoff = () => {
   // Ищем файлы шрифтов .ttf
-  return app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`, {})
+  return app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`, { encoding: false })
     .pipe(app.plugins.plumber(
       app.plugins.notify.onError({
         title: "FONTS",
@@ -37,14 +37,14 @@ export const ttfToWoff = () => {
     // .pipe(app.gulp.dest(`${app.path.build.fonts}`))
 
     // Ищем файлы шрифтов .ttf
-    .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`))
+    .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`), { encoding: false })
     // Конвертируем в .woff2
     .pipe(ttf2woff2())
     // Выгружаем в папку с результатом
     .pipe(app.gulp.dest(`${app.path.build.fonts}`))
     // Ищем файлы шрифтов .woff и woff2
     // .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.{woff,woff2}`))
-    .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.{woff2}`))
+    .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.{woff2}`), { encoding: false })
     // Выгружаем в папку с результатом
     .pipe(app.gulp.dest(`${app.path.build.fonts}`));
 }
