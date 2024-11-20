@@ -79,11 +79,11 @@
     gap: m.rem(12);
     padding: m.rem(20);
   }
-  // .footer-card__image-ibg
-  &__image-ibg {
-    width: m.rem(80);
-    height: m.rem(80);
-  }
+  // // .footer-card__image-ibg
+  // &__image-ibg {
+  //   width: m.rem(80);
+  //   height: m.rem(80);
+  // }
   // .footer-card__title
   &__title {
     @include f.action-large;
