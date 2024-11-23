@@ -1,0 +1,36 @@
+@use 'base';
+
+// Подключение стилей общих элементов проекта
+@use 'common';
+
+// Подключение стилей отдельных блоков
+@use 'header';
+@use 'footer';
+
+// Подключение стилей отдельных страниц
+@use 'index';
+@use 'gifts';
+
+.page {
+  // .page__title
+  &__title {
+  }
+  // .page__hero
+  &__hero {
+  }
+  // .page__about
+  &__about {
+  }
+  // .page__slider
+  &__slider {
+  }
+  // .page__best
+  &__best {
+  }
+  // .page__cta
+  &__cta {
+  }
+  // .page__gifts
+  &__gifts {
+  }
+}

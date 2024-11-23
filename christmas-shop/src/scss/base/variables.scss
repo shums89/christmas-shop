@@ -1,0 +1,53 @@
+@use 'mixins';
+
+//====================================================================
+// Шрифт по умолчанию
+$font-family: 'Montserrat', sans-serif;
+$second-family: 'Allura', cursive, sans-serif;
+$fontSize: mixins.rem(14); // где 14(px) - размер шрифта по умолчанию из макета
+
+// Основные цвета
+$colorMain: #000; // Цвет шрифта по умолчанию
+$colorBgBody: #fff;
+$primary: #ff4646;
+$dark: #181c29;
+$static-white: #fff;
+$content-background: #ecf3f8;
+$tag-purple: #4361ff;
+$tag-pink: #ff43f7;
+$tag-green: #06a44f;
+$primary-10: rgba(255, 70, 70, 0.1);
+$static-white-20: rgba(255, 255, 255, 0.2);
+$static-white-40: rgba(255, 255, 255, 0.4);
+$overlay: rgba(24, 28, 41, 0.8);
+
+//====================================================================
+// НАСТРОЙКИ
+
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1440;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1276;
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: $maxWidth - $maxWidthContainer;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Размеры устройств
+$desktopWidth: 1439.98;
+$tabletWidth: 767.98;
+$mobileWidth: 379.98;
+
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em($tabletWidth); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em($mobileWidth); // Телефоны L
+
+// Тип адаптива:
+// 1 = отзывчивость (у контейнера нет брейкпоинтов),
+// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsiveType: 1;

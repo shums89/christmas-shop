@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="html-gifts">
+@@include('html/_head.htm',{
+"title":"Gifts"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <h1 class="page__title visually-hidden">Christmas Shop: Gifts</h1>
+      <section class="page__gifts gifts">
+        <div class="gifts__container">
+          <h2 class="gifts__title">Achieve health, harmony, and inner strength</h2>
+          <div class="gifts__tabs gifts-tabs">
+            <fieldset class="gifts-tabs__header">
+              <label class="gifts-tabs__header-item">
+                <input type="radio" name="category" value="All" id="all" checked>
+                <span>All</span>
+              </label>
+              <label class="gifts-tabs__header-item">
+                <input type="radio" name="category" value="For work" id="work">
+                <span>For work</span>
+              </label>
+              <label class="gifts-tabs__header-item">
+                <input type="radio" name="category" value="For health" id="health">
+                <span>For health</span>
+              </label>
+              <label class="gifts-tabs__header-item">
+                <input type="radio" name="category" value="For harmony" id="harmony">
+                <span>For harmony</span>
+              </label>
+            </fieldset>
+            <ul class="gifts-tabs__content">
+              <li class="gifts-tabs__content-item">@@include('html/_card.htm',{ "title":"Console.log Guru", "category":"For work", "tag_color": "purple", "image":"for-work.png"})</li>
+              <li class="gifts-tabs__content-item">@@include('html/_card.htm',{ "title":"Step Master", "category":"For health", "tag_color": "green", "image":"for-health.png"})</li>
+              <li class="gifts-tabs__content-item">@@include('html/_card.htm',{ "title":"Bug Magnet", "category":"For work", "tag_color": "purple", "image":"for-work.png"})</li>
+              <li class="gifts-tabs__content-item">@@include('html/_card.htm',{ "title":"Shortcut Cheater", "category":"For work", "tag_color": "purple", "image":"for-work.png"})</li>
+              <li class="gifts-tabs__content-item">@@include('html/_card.htm',{ "title":"Posture Levitation", "category":"For health", "tag_color": "green", "image":"for-health.png"})</li>
+              <li class="gifts-tabs__content-item">@@include('html/_card.htm',{ "title":"Bug Acceptance Guru", "category":"For harmony", "tag_color": "pink", "image":"for-harmony.png"})</li>
+              <li class="gifts-tabs__content-item">@@include('html/_card.htm',{ "title":"Snack Resister", "category":"For health", "tag_color": "green", "image":"for-health.png"})</li>
+              <li class="gifts-tabs__content-item">@@include('html/_card.htm',{ "title":"Error Laugher", "category":"For harmony", "tag_color": "pink", "image":"for-harmony.png"})</li>
+              <li class="gifts-tabs__content-item">@@include('html/_card.htm',{ "title":"Hydration Bot", "category":"For health", "tag_color": "green", "image":"for-health.png"})</li>
+              <li class="gifts-tabs__content-item">@@include('html/_card.htm',{ "title":"Merge Master", "category":"For work", "tag_color": "purple", "image":"for-work.png"})</li>
+              <li class="gifts-tabs__content-item">@@include('html/_card.htm',{ "title":"Joy Charger", "category":"For harmony", "tag_color": "pink", "image":"for-harmony.png"})</li>
+              <li class="gifts-tabs__content-item">@@include('html/_card.htm',{ "title":"Spontaneous Coding Philosopher", "category":"For harmony", "tag_color": "pink", "image":"for-harmony.png"})</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

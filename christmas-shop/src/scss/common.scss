@@ -1,0 +1,94 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+@use 'base/variables.scss' as v;
+@use 'base/mixins.scss' as m;
+@use 'base/fonts.scss' as f;
+
+.button-primary {
+  width: max-content;
+  padding: m.rem(20) m.rem(32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: m.rem(20);
+  color: v.$static-white;
+  background-color: v.$dark;
+  @include f.action-small;
+  transition:
+    color 0.5s ease 0s,
+    background-color 0.5s ease 0s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: v.$dark;
+      background-color: v.$static-white;
+    }
+  }
+}
+
+//====================================================================
+
+.card {
+  width: m.rem(310);
+  height: m.rem(342);
+  border-radius: m.rem(20);
+  overflow: hidden;
+  background-color: v.$content-background;
+
+  // .card__link
+  &__link {
+    display: flex;
+    flex-direction: column;
+    width: m.rem(310);
+    height: m.rem(342);
+  }
+  // .card__image-ibg
+  &__image-ibg {
+    width: m.rem(310);
+    height: m.rem(230);
+  }
+  // .card__content
+  &__content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: m.rem(8);
+    padding: m.rem(20);
+    color: v.$dark;
+    background-color: v.$static-white;
+    border-radius: m.rem(20);
+  }
+  // .card__category
+  &__category {
+    @include f.header-4;
+
+    &[data-tag-color='purple'] {
+      color: v.$tag-purple;
+    }
+    &[data-tag-color='green'] {
+      color: v.$tag-green;
+    }
+    &[data-tag-color='pink'] {
+      color: v.$tag-pink;
+    }
+  }
+  // .card__title
+  &__title {
+    display: inline-block;
+    width: m.rem(270);
+    max-height: m.rem(48);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include f.header-3;
+    transition: color 0.5s ease 0s;
+
+    @media (any-hover: hover) {
+      .card:hover & {
+        color: v.$primary;
+      }
+    }
+  }
+}
