@@ -135,21 +135,22 @@
   // .slider-slider__wrapper
   &__wrapper {
     position: relative;
+    width: 100vw;
     height: rem(200);
-    width: rem($containerWidth);
     overflow: hidden;
   }
   // .slider-slider__swiper
   &__swiper {
     position: absolute;
     top: 0;
-    left: rem(math.div($containerPadding, 2));
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: rem(20);
+
+    @include adaptiveValue('left', math.div($containerPadding, 2), 8, $containerWidth, 768, 1);
   }
   // .slider-slider__slide
   &__slide {
@@ -166,9 +167,10 @@
   &__nav-buttons {
     position: absolute;
     bottom: 0;
-    right: rem(math.div($containerPadding, 2));
     display: flex;
     gap: rem(20);
+
+    @include adaptiveValue('right', math.div($containerPadding, 2), 8, $containerWidth, 768, 1);
   }
   // .slider-slider__nav-button
   &__nav-button {
