@@ -21,7 +21,11 @@
     // .footer__row_top
     &_top {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(rem(390), 1fr));
+
+      @media (max-width: em($tabletWidth)) {
+        grid-template-columns: 1fr;
+      }
     }
     // .footer__row_bottom
     &_bottom {
@@ -67,6 +71,7 @@
   }
 }
 .footer-card {
+  height: rem(204);
   border-radius: rem(20);
   overflow: hidden;
   background-color: $content-background;
