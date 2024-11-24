@@ -69,6 +69,7 @@
     padding: rem(8) rem(20);
     cursor: pointer;
     @include action-small;
+    z-index: 110;
 
     & img {
       width: rem(24);
@@ -87,6 +88,28 @@
 
   // .menu__body
   &__body {
+    flex: 1 1 auto;
+    display: flex;
+
+    @media (max-width: em(768)) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      background-color: $colorBgBody;
+      z-index: 100;
+      opacity: 0;
+      transition:
+        right 1s ease 0s,
+        opacity 1s ease 0s;
+
+      .menu-open & {
+        right: 0;
+        opacity: 1;
+      }
+    }
   }
   // .menu__list
   &__list {
@@ -94,12 +117,15 @@
     align-items: center;
     flex-wrap: wrap;
     gap: rem(8);
+    @include action-small;
 
     @media (max-width: em(768)) {
-      display: none;
-
-      .menu-open & {
-      }
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding-top: rem(64);
+      @include action-large;
     }
   }
   // .menu__item
@@ -114,7 +140,6 @@
     transition:
       color 0.5s ease 0s,
       background-color 0.5s ease 0s;
-    @include action-small;
 
     .html-gifts &_gifts {
       color: $primary;
