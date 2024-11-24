@@ -1,22 +1,22 @@
-@use 'base/variables.scss' as v;
-@use 'base/mixins.scss' as m;
-@use 'base/fonts.scss' as f;
+@use 'base/variables' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
 .footer {
-  padding-top: m.rem(60);
-  padding-bottom: m.rem(60);
+  padding-top: rem(60);
+  padding-bottom: rem(60);
 
   // .footer__container
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: m.rem(60);
-    background-color: v.$static-white;
+    gap: rem(60);
+    background-color: $static-white;
   }
   // .footer__row
   &__row {
-    gap: m.rem(12);
+    gap: rem(12);
 
     // .footer__row_top
     &_top {
@@ -28,7 +28,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: m.rem(12);
+      gap: rem(12);
     }
   }
   // .footer__card
@@ -38,7 +38,7 @@
   &__socials {
     display: flex;
     align-items: center;
-    gap: m.rem(12);
+    gap: rem(12);
   }
   // .footer__social-link
   &__social-link {
@@ -46,63 +46,63 @@
 
     @media (any-hover: hover) {
       &:hover {
-        color: v.$primary;
+        color: $primary;
       }
     }
   }
   // .footer__copyright
   &__copyright {
-    @include f.pg;
+    @include pg;
   }
   // .footer__school-link
   &__school-link {
-    @include f.caption;
+    @include caption;
     transition: color 0.5s ease 0s;
 
     @media (any-hover: hover) {
       &:hover {
-        color: v.$primary;
+        color: $primary;
       }
     }
   }
 }
 .footer-card {
-  border-radius: m.rem(20);
+  border-radius: rem(20);
   overflow: hidden;
-  background-color: v.$content-background;
+  background-color: $content-background;
 
   // .footer-card__link
   &__link {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: m.rem(12);
-    padding: m.rem(20);
+    gap: rem(12);
+    padding: rem(20);
   }
   // // .footer-card__image-ibg
   // &__image-ibg {
-  //   width: m.rem(80);
-  //   height: m.rem(80);
+  //   width: rem(80);
+  //   height: rem(80);
   // }
   // .footer-card__title
   &__title {
-    @include f.action-large;
+    @include action-large;
     transition: color 0.5s ease 0s;
 
     @media (any-hover: hover) {
       .footer-card:hover & {
-        color: v.$primary;
+        color: $primary;
       }
     }
   }
   // .footer-card__subtitle
   &__subtitle {
-    @include f.header-3;
+    @include header-3;
     transition: color 0.5s ease 0s;
 
     @media (any-hover: hover) {
       .footer-card:hover & {
-        color: v.$primary;
+        color: $primary;
       }
     }
   }
