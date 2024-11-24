@@ -130,7 +130,9 @@
 }
 .slider-slider {
   position: relative;
+  max-width: rem($containerWidth);
   padding-bottom: rem(76);
+  overflow: hidden;
 
   // .slider-slider__wrapper
   &__wrapper {

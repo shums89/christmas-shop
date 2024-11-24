@@ -31,9 +31,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: rem(8);
+    flex-wrap: wrap;
     margin-bottom: rem(20);
     @include action-small;
+
+    @include adaptiveValue('column-gap', 8, 1, 768, 380, 1);
   }
   // .gifts-tabs__header-item
   &__header-item {
@@ -43,10 +45,14 @@
 
     & > span {
       display: inline-block;
+      width: max-content;
       padding: rem(12) rem(20);
       border-radius: 12px;
       cursor: pointer;
       transition: background-color 0.3s ease 0s;
+
+      @include adaptiveValue('padding-left', 20, 8, 768, 380, 1);
+      @include adaptiveValue('padding-right', 20, 8, 768, 380, 1);
     }
 
     & > input:checked ~ span {
@@ -65,7 +71,9 @@
   // .gifts-tabs__content
   &__content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, rem(310));
+    grid-auto-rows: 1fr;
+    justify-content: center;
     gap: rem(12);
   }
   // .gifts-tabs__content-item
