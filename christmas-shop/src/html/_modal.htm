@@ -1,6 +1,11 @@
 <section class="modal hidden">
   <div class="modal__wrapper">
-    <div class="modal__image-ibg"><img src="@img/for-work.png" alt="Image"></div>
+    <div class="modal__image-ibg">
+      <picture>
+        <source srcset="@img/for-work.webp" type="image/webp">
+        <img src="@img/for-work.png" alt="Gift image">
+      </picture>
+    </div>
     <div class="modal__content">
       <p class="modal__category" data-tag-color="purple">For work</p>
       <h3 class="modal__title">Console.log Guru</h3>
@@ -8,7 +13,7 @@
       <table class="modal__table table">
         <caption class="table__title">Adds superpowers to:</caption>
         <tbody>
-          <tr class="table__superpower superpower">
+          <tr class="table__superpower superpower superpower_live">
             <td class="superpower__title">Live</td>
             <td class="superpower__value">
               <span data-superpower-value="500">500</span>
@@ -46,7 +51,7 @@
               </fieldset>
             </td>
           </tr>
-          <tr class="table__superpower superpower">
+          <tr class="table__superpower superpower superpower_create">
             <td class="superpower__title">Create</td>
             <td class="superpower__value">
               <span data-superpower-value="500">500</span>
@@ -84,7 +89,7 @@
               </fieldset>
             </td>
           </tr>
-          <tr class="table__superpower superpower">
+          <tr class="table__superpower superpower superpower_love">
             <td class="superpower__title">Love</td>
             <td class="superpower__value">
               <span data-superpower-value="200">200</span>
@@ -122,7 +127,7 @@
               </fieldset>
             </td>
           </tr>
-          <tr class="table__superpower superpower">
+          <tr class="table__superpower superpower superpower_dream">
             <td class="superpower__title">Dream</td>
             <td class="superpower__value">
               <span data-superpower-value="400">400</span>

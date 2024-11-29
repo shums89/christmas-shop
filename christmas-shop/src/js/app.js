@@ -27,4 +27,5 @@ import "./files/slider.js";
 import "./files/timer.js";
 import "./files/best.js";
 import "./files/gifts.js";
+import "./files/modal.js";
 import "./files/script.js";

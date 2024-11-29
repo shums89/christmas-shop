@@ -2,7 +2,7 @@ import { getColorCategory } from "./functions.js";
 
 export const getCard = (element, data) => {
   element.innerHTML = `
-        <article class="card">
+        <article class="card" data-name="${data.name}">
           <a class="card__link" href="#">
             <div class="card__image-ibg">
               <picture>
