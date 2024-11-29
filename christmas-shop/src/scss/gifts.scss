@@ -1,25 +1,25 @@
 @use 'sass:math';
-@use 'base/variables.scss' as v;
-@use 'base/mixins.scss' as m;
-@use 'base/fonts.scss' as f;
+@use 'base/variables' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
 .gifts {
   // .gifts__container
   &__container {
-    padding-top: m.rem(60);
-    padding-bottom: m.rem(60);
-    border-radius: m.rem(20);
-    color: v.$static-white;
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+    border-radius: rem(20);
+    color: $static-white;
     background:
       url('@img/bg-garland.png') top center/100% no-repeat,
-      v.$primary;
+      $primary;
   }
   // .gifts__title
   &__title {
-    max-width: m.rem(426);
-    margin: 0 auto m.rem(20);
+    max-width: rem(426);
+    margin: 0 auto rem(20);
     text-align: center;
-    @include f.header-1;
+    @include header-1;
   }
   // .gifts__tabs
   &__tabs {
@@ -31,9 +31,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: m.rem(8);
-    margin-bottom: m.rem(20);
-    @include f.action-small;
+    flex-wrap: wrap;
+    margin-bottom: rem(20);
+    @include action-small;
+
+    @include adaptiveValue('column-gap', 8, 1, 768, 380, 1);
   }
   // .gifts-tabs__header-item
   &__header-item {
@@ -43,14 +45,18 @@
 
     & > span {
       display: inline-block;
-      padding: m.rem(12) m.rem(20);
+      width: max-content;
+      padding: rem(12) rem(20);
       border-radius: 12px;
       cursor: pointer;
       transition: background-color 0.3s ease 0s;
+
+      @include adaptiveValue('padding-left', 20, 8, 768, 380, 1);
+      @include adaptiveValue('padding-right', 20, 8, 768, 380, 1);
     }
 
     & > input:checked ~ span {
-      background-color: v.$static-white-20;
+      background-color: $static-white-20;
       cursor: default;
       user-select: none;
       pointer-events: none;
@@ -58,15 +64,17 @@
 
     @media (any-hover: hover) {
       &:hover > span {
-        background-color: v.$static-white-20;
+        background-color: $static-white-20;
       }
     }
   }
   // .gifts-tabs__content
   &__content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: m.rem(12);
+    grid-template-columns: repeat(auto-fit, rem(310));
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    gap: rem(12);
   }
   // .gifts-tabs__content-item
   &__content-item {
