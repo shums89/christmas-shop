@@ -4,6 +4,18 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
+[data-tag-color='purple'] {
+  color: $tag-purple;
+}
+[data-tag-color='green'] {
+  color: $tag-green;
+}
+[data-tag-color='pink'] {
+  color: $tag-pink;
+}
+
+//====================================================================
+
 .button-primary {
   width: max-content;
   padding: rem(20) rem(32);
@@ -61,16 +73,6 @@
   // .card__category
   &__category {
     @include header-4;
-
-    &[data-tag-color='purple'] {
-      color: $tag-purple;
-    }
-    &[data-tag-color='green'] {
-      color: $tag-green;
-    }
-    &[data-tag-color='pink'] {
-      color: $tag-pink;
-    }
   }
   // .card__title
   &__title {
@@ -91,4 +93,155 @@
       }
     }
   }
+}
+
+//====================================================================
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 rem(8);
+  background-color: $overlay;
+  z-index: 10;
+
+  &.hidden {
+    display: none;
+  }
+
+  // .modal__wrapper
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: rem(400);
+    width: 100%;
+    min-height: rem(514);
+    border-radius: rem(20);
+    overflow: hidden;
+    background-color: $content-background;
+  }
+  // .modal__image-ibg
+  &__image-ibg {
+    width: 100%;
+    height: rem(230);
+  }
+  // .modal__content
+  &__content {
+    flex: 1 1 auto;
+    padding: rem(20);
+    color: $dark;
+    background-color: $static-white;
+    border-radius: rem(20);
+  }
+  // .modal__category
+  &__category {
+    margin-bottom: rem(8);
+    @include header-4;
+  }
+  // .modal__title
+  &__title {
+    margin-bottom: rem(8);
+    @include header-3;
+  }
+  // .modal__description
+  &__description {
+    margin-bottom: rem(20);
+    @include pg;
+  }
+  // .modal__table
+  &__table {
+  }
+  // .modal__btn
+  &__btn {
+    position: absolute;
+    top: rem(12);
+    right: rem(12);
+    width: rem(40);
+    height: rem(40);
+  }
+}
+.table {
+  width: 100%;
+  @include pg;
+
+  // .table__title
+  &__title {
+    margin-bottom: rem(8);
+    text-align: left;
+    @include header-4;
+  }
+  // .table__row
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(12);
+  }
+  // .table__superpower
+  &__superpower {
+  }
+}
+.superpower {
+  display: flex;
+  justify-content: space-between;
+  gap: rem(12);
+
+  // .superpower__title
+  &__title {
+  }
+  // .superpower__value
+  &__value {
+    display: flex;
+    column-gap: rem(12);
+
+    & span:before {
+      content: '+';
+    }
+
+    & fieldset {
+      display: flex;
+      align-items: center;
+      column-gap: rem(8);
+      color: $primary-10;
+      cursor: pointer;
+    }
+    & label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    & input {
+      display: none;
+    }
+  }
+}
+
+@each $value in 100, 200, 300, 400, 500 {
+  [data-superpower-value='#{$value}'] ~ fieldset label:nth-child(1) {
+    color: $primary;
+  }
+}
+
+@each $value in 200, 300, 400, 500 {
+  [data-superpower-value='#{$value}'] ~ fieldset label:nth-child(2) {
+    color: $primary;
+  }
+}
+
+@each $value in 300, 400, 500 {
+  [data-superpower-value='#{$value}'] ~ fieldset label:nth-child(3) {
+    color: $primary;
+  }
+}
+
+@each $value in 400, 500 {
+  [data-superpower-value='#{$value}'] ~ fieldset label:nth-child(4) {
+    color: $primary;
+  }
+}
+
+[data-superpower-value='500'] ~ fieldset label:nth-child(5) {
+  color: $primary;
 }
