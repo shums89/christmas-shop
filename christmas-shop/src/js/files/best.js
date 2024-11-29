@@ -6,30 +6,29 @@ const initBest = () => {
 
   if (!best) return;
 
-  const getItem = (index) => {
-    const item = document.createElement('li');
-    item.classList.add('best__item');
-    item.append(getCard(item, index));
+  const getItem = (item) => {
+    const li = document.createElement('li');
+    li.classList.add('best__item');
 
-    return item;
+    return getCard(li, item);
   };
 
   const render = () => {
-    getData(`./files/gifts.json`).then(gifts => {
-      const list = [];
+    getData(`./files/gifts.json`)
+      .then(gifts => {
+        const list = [];
 
-      const arr = gifts
-        .reduce((acc, item, i) => [...acc, i], [])
-        .sort(() => Math.random() - 0.5)
-        .slice(-4)
+        const arr = gifts
+          .sort(() => Math.random() - 0.5)
+          .slice(-4)
 
-      for (const index in arr) {
-        list.push(getItem(arr[index]));
-      }
+        for (const index in arr) {
+          list.push(getItem(arr[index]));
+        }
 
-      best.innerHTML = ''
-      best.append(...list);
-    });
+        best.innerHTML = ''
+        best.append(...list);
+      });
   };
 
   render();
