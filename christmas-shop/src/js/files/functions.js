@@ -129,3 +129,13 @@ export const getData = async function (url) {
 
   return await response.json();
 };
+
+export const getColorCategory = (category) => {
+  category = category.toLowerCase();
+
+  switch (category) {
+    case 'for work': return 'purple';
+    case 'for health': return 'green';
+    case 'for harmony': return 'pink';
+  }
+};

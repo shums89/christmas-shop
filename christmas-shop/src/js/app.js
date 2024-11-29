@@ -25,4 +25,5 @@ flsFunctions.menuInit();
 /* Подключаем файлы со своим кодом */
 import "./files/slider.js";
 import "./files/timer.js";
+import "./files/best.js";
 import "./files/script.js";
