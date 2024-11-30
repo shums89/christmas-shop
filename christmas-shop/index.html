@@ -6,13 +6,13 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241127213807">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241130122957">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20241127213807">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20241130122957">
 </head>
 
 <body>
@@ -63,7 +63,7 @@
 			<section class="page__slider slider" id="slider">
 				<div class="slider__container">
 					<p class="slider__caption">Become Happier!</p>
-					<h2 class="slider__title">in the new 2025</h2>
+					<h2 class="slider__title">in the new <span>2025</span></h2>
 					<div class="slider__slider slider-slider">
 						<div class="slider-slider__wrapper">
 							<ul class="slider-slider__swiper">
@@ -168,10 +168,10 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>47</td>
-								<td>5</td>
-								<td>34</td>
-								<td>12</td>
+								<td id="days">47</td>
+								<td id="hours">5</td>
+								<td id="minutes">34</td>
+								<td id="seconds">12</td>
 							</tr>
 						</tbody>
 					</table>
@@ -240,8 +240,186 @@
 				</div>
 			</div>
 		</footer>
+
+		<section class="modal hidden">
+			<div class="modal__wrapper">
+				<div class="modal__image-ibg">
+					<picture>
+						<source srcset="img/for-work.webp" type="image/webp">
+						<img src="img/for-work.png" alt="Gift image">
+					</picture>
+				</div>
+				<div class="modal__content">
+					<p class="modal__category" data-tag-color="purple">For work</p>
+					<h3 class="modal__title">Console.log Guru</h3>
+					<p class="modal__description">Uses console.log like a crystal ball to find any issue.</p>
+					<table class="modal__table table">
+						<caption class="table__title">Adds superpowers to:</caption>
+						<tbody>
+							<tr class="table__superpower superpower superpower_live">
+								<td class="superpower__title">Live</td>
+								<td class="superpower__value">
+									<span data-superpower-value="500">500</span>
+									<fieldset>
+										<label>
+											<input type="radio" value="100" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="200" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="300" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="400" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="500" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+									</fieldset>
+								</td>
+							</tr>
+							<tr class="table__superpower superpower superpower_create">
+								<td class="superpower__title">Create</td>
+								<td class="superpower__value">
+									<span data-superpower-value="500">500</span>
+									<fieldset>
+										<label>
+											<input type="radio" value="100" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="200" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="300" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="400" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="500" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+									</fieldset>
+								</td>
+							</tr>
+							<tr class="table__superpower superpower superpower_love">
+								<td class="superpower__title">Love</td>
+								<td class="superpower__value">
+									<span data-superpower-value="200">200</span>
+									<fieldset>
+										<label>
+											<input type="radio" value="100" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="200" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="300" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="400" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="500" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+									</fieldset>
+								</td>
+							</tr>
+							<tr class="table__superpower superpower superpower_dream">
+								<td class="superpower__title">Dream</td>
+								<td class="superpower__value">
+									<span data-superpower-value="400">400</span>
+									<fieldset>
+										<label>
+											<input type="radio" value="100" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="200" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="300" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="400" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+										<label>
+											<input type="radio" value="500" name="rating">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#snowflake"></use>
+											</svg>
+										</label>
+									</fieldset>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<button class="modal__btn" type="button" aria-label="close">
+					<svg width="40" height="40">
+						<use href="img/icons/sprite.svg#close"></use>
+					</svg>
+				</button>
+			</div>
+		</section>
 	</div>
-	<script src="js/app.min.js?_v=20241127213807"></script>
+	<script src="js/app.min.js?_v=20241130122957"></script>
 </body>
 
 </html>
