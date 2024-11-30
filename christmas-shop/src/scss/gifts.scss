@@ -80,3 +80,21 @@
   &__content-item {
   }
 }
+
+//====================================================================
+
+.button-to-top {
+  position: fixed;
+  bottom: rem(8);
+  right: rem(8);
+  width: rem(56);
+  height: rem(56);
+  background-color: $static-white;
+  border: rem(1) solid $primary;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &.hidden {
+    display: none;
+  }
+}
