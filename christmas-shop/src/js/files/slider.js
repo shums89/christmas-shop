@@ -31,7 +31,7 @@ const initSlider = () => {
   };
 
   const reset = () => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth <= 768) {
       countClick = 6;
     } else {
       countClick = 3;
