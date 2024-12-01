@@ -146,7 +146,7 @@
       background-color: $primary-10;
       cursor: default;
       user-select: none;
-      pointer-events: none;
+      // pointer-events: none;
     }
 
     @media (any-hover: hover) {
