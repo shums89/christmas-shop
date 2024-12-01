@@ -123,7 +123,7 @@
             sliderList.style.transform = `translateX(${-offset * currentSlide}px)`;
         };
         const reset = () => {
-            if (window.innerWidth < 768) countClick = 6; else countClick = 3;
+            if (window.innerWidth <= 768) countClick = 6; else countClick = 3;
             offset = (SLIDER_WIDTH + parseFloat(getComputedStyle(sliderList).left) * 2 - window.innerWidth) / countClick;
             currentSlide = 0;
             btnPrev.disabled = currentSlide === 0;
